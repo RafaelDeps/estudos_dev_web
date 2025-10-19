@@ -1,0 +1,19 @@
+/* teste inicial */
+html, body {
+  margin: 10;
+  padding: 1;
+}
+
+body {
+   background:  #ffefd5; /* cinza claro para confirmar que funcionou */
+}
+/* reset leve e previsível */
+* { box-sizing: border-box; }
+
+
+.cartao {
+  background: #fff;
+  padding: 16px 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
