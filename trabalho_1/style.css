@@ -1,0 +1,127 @@
+/* Reset leve e previsível */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Tema base */
+body {
+  background: #161616;
+  color: #e9ecef;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Título principal */
+.titulo-principal {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.titulo-principal h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.titulo-principal p {
+  margin: 0.25rem 0;
+  color: #cfd4da;
+}
+
+/* Chamada para ação */
+.chamada-para-acao {
+  text-align: center;
+  margin: 2rem auto 0;
+  padding: 1rem;
+}
+
+.chamada-para-acao h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.chamada-para-acao p {
+  margin: 0 0 1rem 0;
+  color: #dee2e6;
+}
+
+/* Botão ciano chamativo */
+.btn-cta-ciano {
+  --ciano: #06b6d4;         /* ciano principal (semelhante a Tailwind cyan-500) */
+  --ciano-escuro: #0891b2;  /* hover */
+  --ciano-brilho: rgba(6, 182, 212, 0.35);
+
+  background-color: var(--ciano) !important;
+  border-color: var(--ciano) !important;
+  color: #06161a !important;            /* texto escuro para alto contraste sobre ciano claro */
+  font-weight: 700;
+  padding: 0.8rem 1.35rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 18px var(--ciano-brilho);
+  transition: transform 0.08s ease-out, box-shadow 0.2s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-cta-ciano:hover {
+  background-color: var(--ciano-escuro) !important;
+  border-color: var(--ciano-escuro) !important;
+  color: #ffffff !important;            /* no hover, troca para branco */
+  box-shadow: 0 10px 24px rgba(6, 182, 212, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-cta-ciano:focus-visible {
+  outline: 3px solid #66e3ff;           /* anel de foco visível */
+  outline-offset: 2px;
+}
+
+.btn-cta-ciano:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px var(--ciano-brilho);
+}
+
+/* Ícone no botão (Font Awesome) */
+.btn-cta-ciano .fa,
+.btn-cta-ciano i[class^="fa"] {
+  margin-right: 0.5rem;
+}
+
+/* Seções de conteúdo */
+.pergunta-curso,
+.conteudo-curso,
+.mestres {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+.conteudo-curso ul {
+  margin: 0.75rem 0 0 1.25rem;
+}
+
+.conteudo-curso li {
+  margin: 0.25rem 0;
+}
+
+/* Links e foco (acessibilidade) */
+a {
+  color: #66b2ff;
+}
+
+a:focus,
+button:focus,
+.btn:focus {
+  outline: 2px solid #66b2ff;
+  outline-offset: 2px;
+}
+
+/* Tamanho fluido do botão em telas muito estreitas */
+@media (max-width: 360px) {
+  .btn-cta-ciano {
+    width: 100%;
+  }
+}
